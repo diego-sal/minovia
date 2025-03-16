@@ -1,0 +1,96 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: letramanin;
+    src: url("Fonts/PixelOperator-Bold.ttf");
+}
+#texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.text, .text1, .text2{
+    font-family: letramanin;
+    text-align: center;
+    width: 58%;
+    font-size: 21px;
+    margin-bottom: 0;
+}
+#rojo{
+    color: #ff3f3f;
+}
+#azul{
+    color: #3f78ff;
+}
+#amarillo{
+    color: #ffd700;
+}
+#verde{
+    color: #00ff55;
+}
+
+#activador{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.typewriter{
+    display: flex;
+    justify-content: center;
+}
+.typewriter h1{
+    font-family: letramanin;
+    font-size: 4em;
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid;
+    animation: typing 3s steps(13), blink 1s step-end infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+
+
+
+@keyframes cambiarFondo {
+    0% {
+        opacity: 1;
+        filter: blur(0px);
+        background-size: 100%;
+    }
+    50% {
+        opacity: 0;
+        filter: blur(10px);
+        background-size: 110%;
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        background-size: 100%;
+        background-image: url('Images/FONDO_DEFINITIVO.png');
+    }
+}
+
+.animacion-fondo {
+    animation: cambiarFondo 4s ease-in-out forwards;
+}
